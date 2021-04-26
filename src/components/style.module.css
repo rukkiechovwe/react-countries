@@ -1,0 +1,45 @@
+.arrow {
+  position: relative;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.arrow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+}
+.hoverEffect {
+  cursor: pointer;
+}
+.hoverEffect > div:last-child {
+  position: relative;
+  cursor: pointer;
+}
+.hoverEffect > div:last-child:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: transparent;
+  transition: 500ms ease-in-out;
+  z-index: 99;
+}
+.hoverEffect:hover > div:last-child:after {
+  width: 100%;
+  background-color: #3f3f3f3f;
+}
+.hoverEffect:hover > div > img {
+  transform: scale(1.2);
+}
