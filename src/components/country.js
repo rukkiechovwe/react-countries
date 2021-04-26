@@ -4,9 +4,9 @@ import styles from "./style.module.css";
 function Country({ data }) {
   const history = useHistory();
   return (
-    <div className="p-2 w-full phone:w-1/2 p-5 mid:1/3 xl:1/4 ">
+    <div className="p-2 w-full phone:w-1/2 p-5 mid:1/3 xl:1/4">
       <div
-        onClick={() => history.push(`/${data.name}`,{data:data})}
+        onClick={() => history.push(`/${data.name}`, { data: data })}
         className={`block shadow-md rounded-b-lg ${styles.hoverEffect}`}
       >
         <div className="w-full overflow-hidden">

@@ -5,7 +5,10 @@ module.exports = {
     screens: {
       'phone': '450px',
       // => @media (min-width: 640px) { ... }
+      'md': '600px',
+      'sm': '768px',
       'mid': '900px',
+      'xl': '1024px',
     },
     color:{
       darkBlue: "hsl(209, 23%, 22%)",
