@@ -27,17 +27,17 @@ function CountryList() {
   }, [search]);
 
   return (
-    <div className="p-5">
-      <div className="px-7 flex justify-between">
-        <div className=" w-2/6">
+    <div className="sm:p-5">
+      <div className="w-full px-4 flex flex-col tablet:flex-row justify-between">
+        <div className="pr-2 w-full tablet:w-80 laptop:w-96">
           <input
             placeholder="Search for a country..."
             onChange={(e) => setSearch(e.target.value)}
             className="shadow-md w-full p-2 rounded"
           />
         </div>
-        <div>
-          <select className={`p-2 w-40 appearance-none shadow-md rounded ${styles.arrow}`}>
+        <div className="pt-4 w-56 tablet:pt-0">
+          <select className={`p-2 w-full appearance-none shadow-md rounded ${styles.arrow}`}>
             <option>Filter by region</option>
             <option>Africa</option>
             <option>America</option>

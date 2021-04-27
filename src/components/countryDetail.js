@@ -5,7 +5,7 @@ function CountryDetail() {
   const data = useLocation().state.data;
   const history = useHistory();
   return (
-    <div className="px-24 py-10">
+    <div className="py-10 px-8 desktop:px-8 desktop:px-24">
       <button
         onClick={() => history.goBack()}
         className="shadow-md rounded px-6 py-1 flex bg-white"
@@ -16,13 +16,13 @@ function CountryDetail() {
         />
         <span className="pl-3">Back</span>
       </button>
-      <div className="flex flex-col pt-10 justify-between md:flex-row">
-        <div className="w-2/5">
+      <div className="flex flex-col pt-10 items-center tablet:flex-row justify-between items-start">
+        <div className="w-full tablet:w-3/5 desktop:w-2/5">
           <img src={data.flag} alt={data.name} className="w-full" />
         </div>
-        <div className="w-1/2 pl-6">
+        <div className="w-full pt-8 pl-0 tablet:w-1/2 pl-6 pt-0">
           <p className="text-2xl font-bold pb-4">{data.name}</p>
-          <div className="flex justify-between ">
+          <div className="flex-col phone:flex-row justify-between ">
             <div>
               <p className="text-sm py-1">
                 <span className="font-semibold">Native Name: </span>

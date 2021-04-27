@@ -3,26 +3,31 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
-      'phone': '450px',
-      // => @media (min-width: 640px) { ... }
-      'md': '600px',
-      'sm': '768px',
-      'mid': '900px',
-      'xl': '1024px',
+      'phone': '480px',
+      // => @media (min-width: 480px) { ... }
+      'tablet': '730px',
+      // => @media (min-width: 730px) { ... }
+
+      'laptop': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'desktop': '1280px',
+      // => @media (min-width: 1280px) { ... }
+      
     },
-    color:{
-      darkBlue: "hsl(209, 23%, 22%)",
-      veryDarkBlue: "hsl(207, 26%, 17%)",
-      darkGrey: "hsl(0, 0%, 52%)",
-      veryLightGrey: "hsl(0, 0%, 98%)",
-      white: "hsl(0, 0%, 100%)",
+    color: {
+      "darkBlue": "hsl(209, 23%, 22%)",
+      "veryDarkBlue": "hsl(207, 26%, 17%)",
+      "darkGrey": "hsl(0, 0%, 52%)",
+      "veryLightGrey": "hsl(0, 0%, 98%)",
+      "white": "hsl(0, 0%, 100%)",
     },
     backgroundColor: (theme) => ({
-      darkBlue: "hsl(209, 23%, 22%)",
-      veryDarkBlue: "hsl(207, 26%, 17%)",
-      darkGrey: "hsl(0, 0%, 52%)",
-      veryLightGrey: "hsl(0, 0%, 98%)",
-      white: "hsl(0, 0%, 100%)",
+      "darkBlue": "hsl(209, 23%, 22%)",
+      "veryDarkBlue": "hsl(207, 26%, 17%)",
+      "darkGrey": "hsl(0, 0%, 52%)",
+      "veryLightGrey": "hsl(0, 0%, 98%)",
+      "white": "hsl(0, 0%, 100%)",
     }),
   },
   variants: {
