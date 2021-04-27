@@ -13,6 +13,7 @@ function CountryDetail() {
         <img
           src="https://img.icons8.com/fluent-systems-filled/48/000000/long-arrow-left.png"
           className="w-4"
+          alt="arrow"
         />
         <span className="pl-3">Back</span>
       </button>
@@ -66,7 +67,9 @@ function CountryDetail() {
           </div>
           <p className="pt-10 flex flex-wrap w-full">
             {data.borders.map((border) => (
-              <span className="shadow-md rounded px-6 py-2 m-2 bg-white">{border}</span>
+              <span className="shadow-md rounded px-6 py-2 m-2 bg-white">
+                {border}
+              </span>
             ))}
           </p>
         </div>

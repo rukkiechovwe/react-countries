@@ -19,7 +19,7 @@ function CountryList() {
   }, []);
 
   // search counties through name
-  useEffect(() => {
+  useEffect((countries) => {
     const res = countries.filter((country) =>
       country.name.toLowerCase().includes(search.toLowerCase())
     );
