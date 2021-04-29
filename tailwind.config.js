@@ -7,27 +7,26 @@ module.exports = {
       // => @media (min-width: 480px) { ... }
       'tablet': '730px',
       // => @media (min-width: 730px) { ... }
-
       'laptop': '1024px',
       // => @media (min-width: 1024px) { ... }
-
       'desktop': '1280px',
       // => @media (min-width: 1280px) { ... }
-      
     },
     color: {
-      "darkBlue": "hsl(209, 23%, 22%)",
-      "veryDarkBlue": "hsl(207, 26%, 17%)",
-      "darkGrey": "hsl(0, 0%, 52%)",
-      "veryLightGrey": "hsl(0, 0%, 98%)",
-      "white": "hsl(0, 0%, 100%)",
+      "darkBlue": "#2B3945",
+      "veryDarkBlue": "#202C37",
+      "veryDarLightkBlue": "#111517",
+      "darkGrey": "#858585",
+      "veryLightGrey": "#fafafa",
+      "primaryWhite": "#ffffff",
     },
     backgroundColor: (theme) => ({
-      "darkBlue": "hsl(209, 23%, 22%)",
-      "veryDarkBlue": "hsl(207, 26%, 17%)",
-      "darkGrey": "hsl(0, 0%, 52%)",
-      "veryLightGrey": "hsl(0, 0%, 98%)",
-      "white": "hsl(0, 0%, 100%)",
+      "darkBlue": "#2B3945",
+      "veryDarkBlue": "#202C37",
+      "veryDarLightkBlue": "#111517",
+      "darkGrey": "#858585",
+      "veryLightGrey": "#fafafa",
+      "primaryWhite": "#ffffff",
     }),
   },
   variants: {

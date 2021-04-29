@@ -5,19 +5,11 @@ import styles from "./style.module.css";
 function CountryList() {
   const [countries, setCountries] = useState([]);
   const [result, setResult] = useState([]);
+  const [Option, setOption] = useState("");
   const [search, setSearch] = useState("");
+  const [error, setError] = useState(null);
 
   const url = "https://restcountries.eu/rest/v2/all";
-  useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setCountries(data);
-        console.log(data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
-
   // search counties through name
   useEffect(() => {
     const res = countries.filter((country) =>
@@ -26,8 +18,31 @@ function CountryList() {
     setResult(res);
   }, [search]);
 
+  const URL =
+    Option.length === 0
+      ? url
+      : `https://restcountries.eu/rest/v2/region/${Option}`;
+  useEffect(() => {
+    setError(null);
+    fetch(URL)
+      .then((res) => res.json())
+      .then((data) => {
+        //console.log(data);
+        if (data.status === 404) {
+          setError(data.message);
+        } else {
+          setCountries(data);
+        }
+      })
+      .catch((error) => {
+        setError(error.toString());
+        console.log(error);
+      });
+  }, [Option]);
+
+  //console.log(countries);
   return (
-    <div className="sm:p-5">
+    <div className="sm:p-5 bg-primaryWhite">
       <div className="w-full px-4 flex flex-col tablet:flex-row justify-between">
         <div className="pr-2 w-full tablet:w-80 laptop:w-96">
           <input
@@ -37,13 +52,18 @@ function CountryList() {
           />
         </div>
         <div className="pt-4 w-56 tablet:pt-0">
-          <select className={`p-2 w-full appearance-none shadow-md rounded ${styles.arrow}`}>
-            <option>Filter by region</option>
-            <option>Africa</option>
-            <option>America</option>
-            <option>Asia</option>
-            <option>Europe</option>
-            <option>Oceania</option>
+          <select
+            className={`p-2 w-full appearance-none shadow-md rounded ${styles.arrow}`}
+            onChange={(e) => {
+              setOption(e.target.value);
+            }}
+          >
+            <option value="">All</option>
+            <option value="africa">Africa</option>
+            <option value="americas">America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
           </select>
         </div>
       </div>
@@ -51,14 +71,17 @@ function CountryList() {
       <div className="w-full flex flex-wrap pt-5">
         {/* if search value, return country list with search result*/}
         {search.length !== 0 &&
+          countries.length !== 0 &&
           result.map((country) => (
             <Country data={country} key={country.name} />
           ))}
         {/* if no search value, return full country list */}
         {search.length === 0 &&
+          error == null &&
           countries.map((country) => (
             <Country data={country} key={country.name} />
           ))}
+        {error !== null && <center>Error={error}</center>}
       </div>
     </div>
   );

@@ -67,7 +67,7 @@ function CountryDetail() {
           </div>
           <p className="pt-10 flex flex-wrap w-full">
             {data.borders.map((border) => (
-              <span className="shadow-md rounded px-6 py-2 m-2 bg-white">
+              <span className="shadow-md rounded px-6 py-2 m-2 bg-white" key={data.name}>
                 {border}
               </span>
             ))}
