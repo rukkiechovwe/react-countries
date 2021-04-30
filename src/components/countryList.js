@@ -43,7 +43,7 @@ function CountryList() {
   //console.log(countries);
   return (
     <div className="sm:p-5">
-      <div className="w-full px-4 flex flex-col tablet:flex-row justify-between">
+      <div className="w-full px-0 flex flex-col tablet:flex-row px-4 justify-between">
         <div className="pr-2 w-full tablet:w-80 laptop:w-96">
           <input
             placeholder="Search for a country..."
@@ -53,17 +53,17 @@ function CountryList() {
         </div>
         <div className="pt-4 w-56 tablet:pt-0">
           <select
-            className={`p-2 w-full appearance-none shadow-md rounded ${styles.arrow} bg-primaryWhite dark:bg-primaryDarkBlue`}
+            className={`p-2 w-full appearance-none shadow-md rounded ${styles.arrow} bg-primaryWhite dark:bg-primaryDarkBlue text-veryDarkLightkBlue dark:text-primaryWhite`}
             onChange={(e) => {
               setOption(e.target.value);
             }}
           >
-            <option value="" className="text-veryDarkLightkBlue dark:primaryWhite">All</option>
-            <option value="africa" className="text-veryDarkLightkBlue dark:primaryWhite">Africa</option>
-            <option value="americas" className="text-veryDarkLightkBlue dark:primaryWhite">America</option>
-            <option value="asia" className="text-veryDarkLightkBlue dark:primaryWhite">Asia</option>
-            <option value="europe" className="text-veryDarkLightkBlue dark:primaryWhite">Europe</option>
-            <option value="oceania" className="text-veryDarkLightkBlue dark:primaryWhite">Oceania</option>
+            <option value="">All</option>
+            <option value="africa">Africa</option>
+            <option value="americas">America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
           </select>
         </div>
       </div>
