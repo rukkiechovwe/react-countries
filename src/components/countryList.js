@@ -48,7 +48,7 @@ function CountryList() {
           <input
             placeholder="Search for a country..."
             onChange={(e) => setSearch(e.target.value)}
-            className="shadow-md w-full p-2 rounded bg-primaryWhite dark:bg-primaryDarkBlue"
+            className="shadow-md w-full p-2 rounded bg-primaryWhite dark:bg-primaryDarkBlue text-veryDarkLightkBlue dark:text-primaryWhite"
           />
         </div>
         <div className="pt-4 w-56 tablet:pt-0">
