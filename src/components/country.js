@@ -16,19 +16,19 @@ function Country({ data }) {
             alt={data.name}
           />
         </div>
-        <div className="px-5 pt-5 pb-7 bg-white rounded-b-lg flex flex-col items-start shadow-inner">
-          <p className="text-lg font-bold pb-3 whitespace-nowrap overflow-hidden overflow-ellipsis w-full">
+        <div className="px-5 pt-5 pb-7 bg-primaryWhite rounded-b-lg flex flex-col items-start shadow-inner dark:bg-primaryDarkBlue">
+          <p className="text-lg font-bold pb-3 whitespace-nowrap overflow-hidden overflow-ellipsis w-full text-veryDarkLightkBlue dark:text-primaryWhite">
             {data.name}
           </p>
-          <p className="py-1">
+          <p className="py-1 text-veryDarkLightkBlue dark:text-primaryWhite">
             <span className="font-bold pr-2">Poulation:</span>
             {data.population}
           </p>
-          <p className="py-1">
+          <p className="py-1 text-veryDarkLightkBlue dark:text-primaryWhite">
             <span className="font-bold pr-2">Region:</span>
             {data.region}
           </p>
-          <p className="py-1">
+          <p className="py-1 text-veryDarkLightkBlue dark:text-primaryWhite">
             <span className="font-bold pr-2">Capital:</span>
             {data.capital}
           </p>

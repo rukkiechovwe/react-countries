@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     screens: {
       'phone': '480px',
@@ -13,24 +13,34 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
     },
     color: {
-      "darkBlue": "#2B3945",
+      "primaryDarkBlue": "#2B3945",
       "veryDarkBlue": "#202C37",
-      "veryDarLightkBlue": "#111517",
-      "darkGrey": "#858585",
+      "veryDarkLightkBlue": "#111517",
+      "primaryDarkGrey": "#858585",
       "veryLightGrey": "#fafafa",
       "primaryWhite": "#ffffff",
     },
-    backgroundColor: (theme) => ({
-      "darkBlue": "#2B3945",
+    backgroundColor: theme => ({
+      "primaryDarkBlue": "#2B3945",
       "veryDarkBlue": "#202C37",
-      "veryDarLightkBlue": "#111517",
-      "darkGrey": "#858585",
+      "veryDarkLightkBlue": "#111517",
+      "primaryDarkGrey": "#858585",
       "veryLightGrey": "#fafafa",
       "primaryWhite": "#ffffff",
     }),
+    textColor:{
+      "primaryDarkBlue": "#2B3945",
+      "veryDarkBlue": "#202C37",
+      "veryDarkLightkBlue": "#111517",
+      "primaryDarkGrey": "#858585",
+      "veryLightGrey": "#fafafa",
+      "primaryWhite": "#ffffff",
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active'],
+    },
   },
   plugins: [],
 };
