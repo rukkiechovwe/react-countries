@@ -8,13 +8,11 @@ function CountryDetail() {
     <div className="pt-28 py-10 px-8 desktop:px-8 desktop:px-24">
       <button
         onClick={() => history.goBack()}
-        className="shadow-md rounded px-6 py-1 flex bg-white bg-primaryWhite dark:bg-primaryDarkBlue text-veryDarkLightkBlue dark:text-primaryWhite"
+        className="shadow-md rounded px-6 py-1 flex items-center bg-white bg-primaryWhite dark:bg-primaryDarkBlue text-veryDarkLightkBlue dark:text-primaryWhite"
       >
-        <img
-          src="https://img.icons8.com/fluent-systems-filled/48/000000/long-arrow-left.png"
-          className="w-4"
-          alt="arrow"
-        />
+       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+      </svg>
         <span className="pl-3">Back</span>
       </button>
 
