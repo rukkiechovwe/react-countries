@@ -9,7 +9,7 @@ function CountryList() {
   const [search, setSearch] = useState("");
   const [error, setError] = useState(null);
 
-  const url = "https://restcountries.eu/rest/v2/all";
+  const url = "https://restcountries.com/v3.1/all";
   // search counties through name
   useEffect(() => {
     const res = countries.filter((country) =>
@@ -21,7 +21,7 @@ function CountryList() {
   const URL =
     Option.length === 0
       ? url
-      : `https://restcountries.eu/rest/v2/region/${Option}`;
+      : `https://restcountries.com/v3.1/region/${Option}`;
   useEffect(() => {
     setError(null);
     fetch(URL)
